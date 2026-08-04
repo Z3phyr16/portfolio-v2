@@ -6,13 +6,13 @@ export default function Footer() {
           {/* Copyright */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>©</span>
-            <span>2024 Mark Tungol. Built with precision.</span>
+            <span>2026 Mark Tungol. Built with precision.</span>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a
-              href="#"
+              href="https://github.com/Z3phyr16"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent transition-colors"
@@ -20,19 +20,22 @@ export default function Footer() {
               GitHub
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mark-tungol-790350254/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent transition-colors"
             >
               LinkedIn
             </a>
-            <a href="mailto:mark@example.com" className="hover:text-accent transition-colors">
+            <a
+              href="mailto:marktungol0216@gmail.com"
+              className="hover:text-accent transition-colors"
+            >
               Email
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
