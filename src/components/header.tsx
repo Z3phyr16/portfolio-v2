@@ -51,9 +51,14 @@ export default function Header() {
 
               {/* Resume Button */}
               <div className="flex gap-2 items-center">
-                <RippleButton className="bg-accent hover:bg-accent/90 text-foreground font-semibold max-w-[150px] max-h-[40px] text-sm md:text-md border-background">
-                  Download CV
-                </RippleButton>
+                <a
+                  href="/mark-tungol-resume-main.pdf"
+                  download="mark-tungol-resume-main.pdf"
+                >
+                  <RippleButton className="bg-accent hover:bg-accent/90 text-foreground font-semibold max-w-[150px] max-h-[40px] text-sm md:text-md border-background">
+                    Download CV
+                  </RippleButton>
+                </a>
                 {/* <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                   Download CV
                 </Button> */}

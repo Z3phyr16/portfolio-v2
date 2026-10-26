@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import BorderGlow from "./BorderGlow";
 import ClickSpark from "@/components/ClickSpark";
+import FlipCard from "./FlipCard";
 
 export default function ExperienceCard() {
   return (
@@ -73,11 +74,130 @@ export default function ExperienceCard() {
           <h3 className="text-lg md:text-xl font-bold text-foreground mb-4">
             Featured Projects
           </h3>
-          <hr className="border-muted-foreground" />
+          <hr className="border-muted-foreground mb-4" />
           {/* Projects */}
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 md:col-span-6">Project 1</div>
-            <div className="col-span-12 md:col-span-6">Project 2</div>
+          <div className="grid grid-cols-2 gap-4 overflow-x-hidden">
+            <div className="col-span-2 md:col-span-1">
+              <div className="w-full [&>div]:!w-full">
+                <FlipCard
+                  front={
+                    <img
+                      src="/lunas.jpg"
+                      alt="Medical Management System"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  }
+                  back={
+                    <div
+                      style={{
+                        padding: 24,
+                        backgroundImage:
+                          "linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('lunas.jpg')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        color: "#ffffff",
+                      }}
+                      className="h-full flex flex-col justify-between" // Use justify-between if you want the text at the top and bottom like the reference
+                    >
+                      <div className="text-center">
+                        <h3 className="font-bold text-xl  mb-2">
+                          Medical Management System
+                        </h3>
+                        <p className="text-gray-300">
+                          Enables integrated management of healthcare
+                          operations, medical information, and patient services.
+                        </p>
+                      </div>
+                    </div>
+                  }
+                  axis="y"
+                  flipOnClick
+                  draggable
+                  dragDistance={0}
+                  tilt
+                  tiltMax={12}
+                  glare
+                  glareOpacity={0.22}
+                  hoverScale={1.03}
+                  perspective={1100}
+                  stiffness={170}
+                  damping={20}
+                  height={350}
+                  radius={22}
+                  background="#27272a"
+                  color="#f5f5f5"
+                  shadow
+                  shadowColor="transparent"
+                  shadowOpacity={0.45}
+                  onFlipChange={(flipped) => console.log(flipped)}
+                />
+              </div>
+            </div>
+            <div className="col-span-2 md:col-span-1">
+              <div className="w-full [&>div]:!w-full">
+                <FlipCard
+                  front={
+                    <img
+                      src="/sukey.png"
+                      alt="Sukey"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  }
+                  back={
+                    <div
+                      style={{
+                        padding: 24,
+                        backgroundImage:
+                          "linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('sukey.png')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        color: "#ffffff",
+                      }}
+                      className="h-full flex flex-col justify-between" // Use justify-between if you want the text at the top and bottom like the reference
+                    >
+                      <div className="text-center">
+                        <h3 className="font-bold text-xl  mb-2">
+                          Car Rental System
+                        </h3>
+                        <p className="text-gray-300">
+                          Sukey connects drivers with unique vehicles and car
+                          owners with verified renters. Skip the counter, or put
+                          your idle car to work.
+                        </p>
+                      </div>
+                    </div>
+                  }
+                  axis="y"
+                  flipOnClick
+                  draggable
+                  dragDistance={0}
+                  tilt
+                  tiltMax={12}
+                  glare
+                  glareOpacity={0.22}
+                  hoverScale={1.03}
+                  perspective={1100}
+                  stiffness={170}
+                  damping={20}
+                  height={350}
+                  radius={22}
+                  background="#27272a"
+                  color="#f5f5f5"
+                  shadow
+                  shadowColor="transparent"
+                  shadowOpacity={0.45}
+                  onFlipChange={(flipped) => console.log(flipped)}
+                />
+              </div>
+            </div>
           </div>
         </ClickSpark>
       </BorderGlow>
@@ -139,7 +259,7 @@ export default function ExperienceCard() {
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">SQL Server</Badge>
                 <Badge variant="secondary">PostgreSQL</Badge>
-                <Badge variant="secondary">Prisma</Badge>
+                <Badge variant="secondary">MySql</Badge>
               </div>
             </div>
           </div>

@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* Customize the overall scrollbar track width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Customize the background track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Customize the moving scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 9999px;
+}
+
+/* Hover effect on the handle */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.5);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
